@@ -31,11 +31,12 @@
   height: 275px;
   width: 204px;
   grid-template-columns: 30px 30px 30px 30px 30px;
-  grid-template-rows: 2px;
+  grid-template-rows: 30px 30px 30px 30px 30px 30px;
   background-image: url(../../public/prayer-background.png);
   background-repeat: no-repeat;
   overflow: hidden;
-  
+  column-gap: 7px;
+  row-gap: 2px;
 }
 
 
