@@ -1,0 +1,24 @@
+.prayerimage {
+  /*
+  i spent an unreasonable 
+  amount of time measuring this
+  */
+  max-width: 30px;
+  max-height: 30px;
+  padding-left: 3px;
+  padding-right: 4px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+
+
+.clicked {
+  background-image: none !important;
+  /* TODO: change this to add the clicked background */
+}
+
+.prayer-list {
+  display: flex;
+}
+
