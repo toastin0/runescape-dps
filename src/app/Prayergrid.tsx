@@ -8,7 +8,7 @@ export default function Prayergrid({prayerBook}: {prayerBook: "normal" | "ruinou
   // and choose not to blame myself
   const normalBook = 
     (
-    <div id="prayer-controls" className={style.prayerBackground}>
+    <div id="prayer-controls" style={{width:"204px"}}>
       <div className={style.prayerList}>
           <Prayer src="/prayers/Thick_Skin.png" alt="Thick Skin"></Prayer>
           <Prayer src="/prayers/Burst_of_Strength.png" alt="Burst of Strength"></Prayer>
