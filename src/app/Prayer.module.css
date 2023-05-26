@@ -1,3 +1,4 @@
+
 .prayerimage {
   /*
   i spent an unreasonable 
@@ -18,7 +19,24 @@
   /* TODO: change this to add the clicked background */
 }
 
-.prayer-list {
-  display: flex;
+.prayerList {
+  display:grid;
+  box-sizing: content-box;
+  max-width: 178px;
+  max-height: 241px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 13px;
+  padding-right: 13px;
+  height: 275px;
+  width: 204px;
+  grid-template-columns: 30px 30px 30px 30px 30px;
+  grid-template-rows: 2px;
+  background-image: url(../../public/prayer-background.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  
 }
+
+
 
