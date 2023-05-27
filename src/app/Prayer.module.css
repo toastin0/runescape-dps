@@ -1,4 +1,3 @@
-
 .prayerimage {
   /*
   i spent an unreasonable 
@@ -8,26 +7,26 @@
   max-height: 30px;
   padding-left: 3px;
   padding-right: 4px;
+  border-top-width: 2px;
+  border-style: solid;
   padding-top: 1px;
   padding-bottom: 1px;
   image-rendering: crisp-edges;
 }
 
-
-
 .clicked {
-  background-image: none !important;
-  /* TODO: change this to add the clicked background */
+  background-image: url(../../public/prayers/Active.png);
+  background-repeat: no-repeat;
+  background-position: 1px;
+  background-size: 34px 34px;
 }
 
 .prayerList {
-  display:grid;
+  display: grid;
   box-sizing: content-box;
-  max-width: 178px;
-  max-height: 241px;
   padding-top: 17px;
   padding-bottom: 17px;
-  padding-left: 13px;
+  padding-left: 10px;
   padding-right: 13px;
   height: 275px;
   width: 204px;
@@ -36,11 +35,7 @@
   background-image: url(../../public/prayer-background.png);
   background-repeat: no-repeat;
   background-clip: padding-box;
-  background-size: contain;
   overflow: hidden;
   column-gap: 7px;
   row-gap: 7px;
 }
-
-
-
