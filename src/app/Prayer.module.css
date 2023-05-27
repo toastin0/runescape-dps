@@ -24,9 +24,9 @@
 .prayerList {
   display: grid;
   box-sizing: content-box;
-  padding-top: 17px;
+  padding-top: 15px;
   padding-bottom: 17px;
-  padding-left: 10px;
+  padding-left: 7px;
   padding-right: 13px;
   height: 275px;
   width: 204px;
