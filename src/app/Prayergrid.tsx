@@ -3,6 +3,8 @@ import Prayer from "./Prayer";
 import style from "./Prayer.module.css";
 import { normalPrayers } from "./dps";
 
+
+// to whom it may concern: i am sorry
 export default function Prayergrid({
   prayerBook,
   prayerState,
@@ -31,174 +33,230 @@ export default function Prayergrid({
           src="/prayers/Burst_of_Strength.png"
           alt="Burst of Strength"
           isActive={prayerState.burstStrength}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, burstStrength: !prayerState.burstStrength })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Clarity_of_Thought.png"
           alt="Clarity of Thought"
           isActive={prayerState.clarityThought}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, clarityThought: !prayerState.clarityThought })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Sharp_Eye.png"
           alt="Sharp Eye"
           isActive={prayerState.sharpEye}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, sharpEye: !prayerState.sharpEye})
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Mystic_Will.png"
           alt="Mystic Will"
           isActive={prayerState.mysticWill}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, mysticWill: !prayerState.mysticWill })
+          }}
         ></Prayer>
 
         <Prayer
           src="/prayers/Rock_Skin.png"
           alt="Rock Skin"
           isActive={prayerState.rockSkin}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, rockSkin: !prayerState.rockSkin })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Superhuman_Strength.png"
           alt="Superhuman Strength"
           isActive={prayerState.superStrength}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, superStrength: !prayerState.superStrength })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Improved_Reflexes.png"
           alt="Improved Reflexes"
           isActive={prayerState.improvedReflexes}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, improvedReflexes: !prayerState.improvedReflexes})
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Rapid_Restore.png"
           alt="Rapid Restore"
           isActive={prayerState.rapidRestore}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, rapidRestore: !prayerState.rapidRestore })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Rapid_Heal.png"
           alt="Rapid Heal"
           isActive={prayerState.rapidHeal}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, rapidHeal: !prayerState.rapidHeal })
+          }}
         ></Prayer>
 
         <Prayer
           src="/prayers/Protect_Item.png"
           alt="Protect Item"
           isActive={prayerState.protItem}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, protItem: !prayerState.protItem })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Hawk_Eye.png"
           alt="Hawk Eye"
           isActive={prayerState.hawkEye}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, hawkEye: !prayerState.hawkEye })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Mystic_Lore.png"
           alt="Mystic Lore"
           isActive={prayerState.mysticLore}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, mysticLore: !prayerState.mysticLore })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Steel_Skin.png"
           alt="Steel Skin"
           isActive={prayerState.steelSkin}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, steelSkin: !prayerState.steelSkin })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Ultimate_Strength.png"
           alt="Ultimate Strength"
           isActive={prayerState.ultimateStrength}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, ultimateStrength: !prayerState.ultimateStrength })
+          }}
         ></Prayer>
 
         <Prayer
           src="/prayers/Incredible_Reflexes.png"
           alt="Incredible Reflexes"
           isActive={prayerState.incredibleReflexes}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, incredibleReflexes: !prayerState.incredibleReflexes})
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Protect_from_Magic.png"
           alt="Protect from Magic"
           isActive={prayerState.protMagic}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, protMagic: !prayerState.protMagic })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Protect_from_Missiles.png"
           alt="Protect from Missiles"
           isActive={prayerState.protRanged}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, protRanged: !prayerState.protMagic })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Protect_from_Melee.png"
           alt="Protect from Melee"
           isActive={prayerState.protMelee}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, protMelee: !prayerState.protMelee })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Eagle_Eye.png"
           alt="Eagle Eye"
           isActive={prayerState.eagleEye}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, eagleEye: !prayerState.eagleEye })
+          }}
         ></Prayer>
 
         <Prayer
           src="/prayers/Mystic_Might.png"
           alt="Mystic Might"
           isActive={prayerState.mysticMight}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, mysticMight: !prayerState.mysticMight })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Retribution.png"
           alt="Retribution"
           isActive={prayerState.retribution}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, retribution: !prayerState.retribution})
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Redemption.png"
           alt="Redemption"
           isActive={prayerState.redemption}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, redemption: !prayerState.redemption })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Smite.png"
           alt="Smite"
           isActive={prayerState.smite}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, smite: !prayerState.smite })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Preserve.png"
           alt="Preserve"
           isActive={prayerState.preserve}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, preserve: !prayerState.preserve })
+          }}
         ></Prayer>
 
         <Prayer
           src="/prayers/Chivalry.png"
           alt="Chivalry"
           isActive={prayerState.chivalry}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, chivalry: !prayerState.chivalry })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Piety.png"
           alt="Piety"
           isActive={prayerState.piety}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, piety: !prayerState.piety })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Rigour.png"
           alt="Rigour"
           isActive={prayerState.rigour}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, rigour: !prayerState.rigour })
+          }}
         ></Prayer>
         <Prayer
           src="/prayers/Augury.png"
           alt="Augury"
           isActive={prayerState.augury}
-          onPress={() => {}}
+          onPress={() => {
+            prayerModify({ ...prayerState, augury: !prayerState.augury })
+          }}
         ></Prayer>
       </div>
     </div>
