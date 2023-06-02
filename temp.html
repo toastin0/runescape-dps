@@ -9,6 +9,9 @@
       html {
         background-color: #111111;
       }
+      img {
+        background-image: none;
+      }
     </style>
   </head>
   <body>
@@ -88,9 +91,14 @@
       })
       prayers.forEach(val => {
         val.addEventListener("click",(e) => {
-          clickedPrayers.includes(`${e.target.alt}`) ? 
+          if(clickedPrayers.includes(`${e.target.alt}`)) {
           clickedPrayers.pop(clickedPrayers.indexOf(`${e.target.alt}`))
-          : clickedPrayers.push(`${e.target.alt}`)
+          e.target.style.backgroundImage = "none" 
+          }
+          else { 
+            clickedPrayers.push(`${e.target.alt}`)
+            e.target.style.backgroundImage = "url(public/prayers/Active.png)"
+          }
           updateText()
         })
         
