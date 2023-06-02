@@ -9,7 +9,14 @@
       "rangedStrength": 1,
       "prayerDrain": 3
     },
-    "conflictWith": ["rockSkin", "steelSkin", "chivalry", "piety", "rigour", "augury"]
+    "conflictWith": [
+      "rockSkin",
+      "steelSkin",
+      "chivalry",
+      "piety",
+      "rigour",
+      "augury"
+    ]
   },
   "burstStrength": {
     "stats": {
@@ -47,7 +54,20 @@
       "rangedStrength": 1,
       "prayerDrain": 3
     },
-    "conflictWith": []
+    "conflictWith": [
+      "sharpEye",
+      "mysticWill",
+      "improvedReflexes",
+      "hawkEye",
+      "mysticLore",
+      "incredibleReflexes",
+      "eagleEye",
+      "mysticMight",
+      "chivalry",
+      "piety",
+      "rigour",
+      "augury"
+    ]
   },
   "sharpEye": {
     "stats": {
@@ -59,7 +79,22 @@
       "rangedStrength": 1.05,
       "prayerDrain": 3
     },
-    "conflictWith": []
+    "conflictWith": [
+      "mysticWill",
+      "clarityThought",
+      "burstStrength",
+      "improvedReflexes",
+      "superStrength",
+      "hawkEye",
+      "mysticLore",
+      "incredibleReflexes",
+      "eagleEye",
+      "mysticMight",
+      "chivalry",
+      "piety",
+      "rigour",
+      "augury"
+    ]
   },
   "mysticWill": {
     "stats": {
@@ -71,7 +106,23 @@
       "rangedStrength": 1,
       "prayerDrain": 3
     },
-    "conflictWith": []
+    "conflictWith": [
+      "clarityThought",
+      "sharpEye",
+      "burstStrength",
+      "improvedReflexes",
+      "superStrength",
+      "hawkEye",
+      "mysticLore",
+      "incredibleReflexes",
+      "ultimateStrength",
+      "eagleEye",
+      "mysticMight",
+      "chivalry",
+      "piety",
+      "rigour",
+      "augury"
+    ]
   },
   "rockSkin": {
     "stats": {
@@ -83,7 +134,14 @@
       "rangedStrength": 1,
       "prayerDrain": 6
     },
-    "conflictWith": []
+    "conflictWith": [
+      "thickSkin",
+      "steelSkin",
+      "chivalry",
+      "piety",
+      "rigour",
+      "augury"
+    ]
   },
   "superStrength": {
     "stats": {
@@ -95,7 +153,20 @@
       "rangedStrength": 1,
       "prayerDrain": 6
     },
-    "conflictWith": []
+    "conflictWith": [
+      "mysticWill",
+      "sharpEye",
+      "burstStrength",
+      "ultimateStrength",
+      "eagleEye",
+      "mysticMight",
+      "piety",
+      "chivalry",
+      "rigour",
+      "augury",
+      "hawkEye",
+      "mysticLore"
+    ]
   },
   "improvedReflexes": {
     "stats": {
@@ -107,7 +178,20 @@
       "rangedStrength": 1,
       "prayerDrain": 6
     },
-    "conflictWith": []
+    "conflictWith": [
+      "hawkEye",
+      "mysticLore",
+      "clarityThought",
+      "sharpEye",
+      "mysticWill",
+      "incredibleReflexes",
+      "eagleEye",
+      "mysticMight",
+      "chivalry",
+      "piety",
+      "rigour",
+      "augury"
+    ]
   },
   "rapidRestore": {
     "stats": {
@@ -155,7 +239,23 @@
       "rangedStrength": 1.1,
       "prayerDrain": 6
     },
-    "conflictWith": []
+    "conflictWith": [
+      "superStrength",
+      "improvedReflexes",
+      "mysticLore",
+      "ultimateStrength",
+      "incredibleReflexes",
+      "eagleEye",
+      "mysticMight",
+      "sharpEye",
+      "clarityThought",
+      "mysticWill",
+      "burstStrength",
+      "chivalry",
+      "piety",
+      "rigour",
+      "augury"
+    ]
   },
   "mysticLore": {
     "stats": {
@@ -167,7 +267,23 @@
       "rangedStrength": 1,
       "prayerDrain": 6
     },
-    "conflictWith": []
+    "conflictWith": [
+      "hawkEye",
+      "improvedReflexes",
+      "superStrength",
+      "mysticWill",
+      "sharpEye",
+      "clarityThought",
+      "burstStrength",
+      "incredibleReflexes",
+      "ultimateStrength",
+      "mysticMight",
+      "eagleEye",
+      "chivalry",
+      "piety",
+      "rigour",
+      "augury"
+    ]
   },
   "steelSkin": {
     "stats": {
@@ -179,7 +295,14 @@
       "rangedStrength": 1,
       "prayerDrain": 12
     },
-    "conflictWith": []
+    "conflictWith": [
+      "rockSkin",
+      "thickSkin",
+      "chivalry",
+      "piety",
+      "rigour",
+      "augury"
+    ]
   },
   "ultimateStrength": {
     "stats": {
@@ -191,7 +314,20 @@
       "rangedStrength": 1,
       "prayerDrain": 12
     },
-    "conflictWith": []
+    "conflictWith": [
+      "eagleEye",
+      "mysticMight",
+      "mysticLore",
+      "hawkEye",
+      "superStrength",
+      "burstStrength",
+      "mysticWill",
+      "sharpEye",
+      "piety",
+      "chivalry",
+      "rigour",
+      "augury"
+    ]
   },
   "incredibleReflexes": {
     "stats": {
@@ -203,7 +339,20 @@
       "rangedStrength": 1,
       "prayerDrain": 12
     },
-    "conflictWith": []
+    "conflictWith": [
+      "improvedReflexes",
+      "hawkEye",
+      "mysticLore",
+      "clarityThought",
+      "mysticWill",
+      "sharpEye",
+      "eagleEye",
+      "mysticMight",
+      "chivalry",
+      "piety",
+      "rigour",
+      "augury"
+    ]
   },
   "protMagic": {
     "stats": {
@@ -215,7 +364,13 @@
       "rangedStrength": 1,
       "prayerDrain": 12
     },
-    "conflictWith": []
+    "conflictWith": [
+      "protRanged",
+      "protMelee",
+      "retribution",
+      "redemption",
+      "smite"
+    ]
   },
   "protRanged": {
     "stats": {
@@ -227,7 +382,13 @@
       "rangedStrength": 1,
       "prayerDrain": 12
     },
-    "conflictWith": []
+    "conflictWith": [
+      "protMagic",
+      "protMelee",
+      "retribution",
+      "redemption",
+      "smite"
+    ]
   },
   "protMelee": {
     "stats": {
@@ -239,7 +400,13 @@
       "rangedStrength": 1,
       "prayerDrain": 12
     },
-    "conflictWith": []
+    "conflictWith": [
+      "protRanged",
+      "protMagic",
+      "retribution",
+      "redemption",
+      "smite"
+    ]
   },
   "eagleEye": {
     "stats": {
@@ -251,7 +418,23 @@
       "rangedStrength": 1.15,
       "prayerDrain": 12
     },
-    "conflictWith": []
+    "conflictWith": [
+      "incredibleReflexes",
+      "ultimateStrength",
+      "mysticMight",
+      "improvedReflexes",
+      "superStrength",
+      "mysticLore",
+      "hawkEye",
+      "sharpEye",
+      "clarityThought",
+      "burstStrength",
+      "mysticWill",
+      "chivalry",
+      "piety",
+      "rigour",
+      "augury"
+    ]
   },
   "mysticMight": {
     "stats": {
@@ -263,7 +446,23 @@
       "rangedStrength": 1,
       "prayerDrain": 1
     },
-    "conflictWith": []
+    "conflictWith": [
+      "eagleEye",
+      "incredibleReflexes",
+      "ultimateStrength",
+      "mysticLore",
+      "hawkEye",
+      "superStrength",
+      "improvedReflexes",
+      "sharpEye",
+      "mysticWill",
+      "clarityThought",
+      "burstStrength",
+      "chivalry",
+      "piety",
+      "rigour",
+      "augury"
+    ]
   },
   "retribution": {
     "stats": {
@@ -275,7 +474,13 @@
       "rangedStrength": 1,
       "prayerDrain": 3
     },
-    "conflictWith": []
+    "conflictWith": [
+      "redemption",
+      "smite",
+      "protMelee",
+      "protRanged",
+      "protMagic"
+    ]
   },
   "redemption": {
     "stats": {
@@ -287,7 +492,13 @@
       "rangedStrength": 1,
       "prayerDrain": 6
     },
-    "conflictWith": []
+    "conflictWith": [
+      "smite",
+      "retribution",
+      "protMelee",
+      "protRanged",
+      "protMagic"
+    ]
   },
   "smite": {
     "stats": {
@@ -299,7 +510,13 @@
       "rangedStrength": 1,
       "prayerDrain": 6
     },
-    "conflictWith": []
+    "conflictWith": [
+      "smite",
+      "retribution",
+      "protMelee",
+      "protRanged",
+      "redemption"
+    ]
   },
   "preserve": {
     "stats": {
@@ -323,7 +540,26 @@
       "rangedStrength": 1,
       "prayerDrain": 24
     },
-    "conflictWith": []
+    "conflictWith": [
+      "chivalry",
+      "mysticMight",
+      "eagleEye",
+      "incredibleReflexes",
+      "ultimateStrength",
+      "steelSkin",
+      "mysticLore",
+      "hawkEye",
+      "improvedReflexes",
+      "superStrength",
+      "rockSkin",
+      "mysticWill",
+      "sharpEye",
+      "clarityThought",
+      "burstStrength",
+      "piety",
+      "augury",
+      "rigour"
+    ]
   },
   "piety": {
     "stats": {
@@ -335,7 +571,26 @@
       "rangedStrength": 1,
       "prayerDrain": 24
     },
-    "conflictWith": []
+    "conflictWith": [
+      "piety",
+      "rigour",
+      "augury",
+      "mysticMight",
+      "eagleEye",
+      "incredibleReflexes",
+      "steelSkin",
+      "ultimateStrength",
+      "mysticLore",
+      "hawkEye",
+      "improvedReflexes",
+      "superStrength",
+      "rockSkin",
+      "mysticWill",
+      "sharpEye",
+      "clarityThought",
+      "burstStrength",
+      "thickSkin"
+    ]
   },
   "rigour": {
     "stats": {
@@ -347,7 +602,26 @@
       "rangedStrength": 1.23,
       "prayerDrain": 24
     },
-    "conflictWith": []
+    "conflictWith": [
+      "augury",
+      "piety",
+      "chivalry",
+      "mysticMight",
+      "eagleEye",
+      "incredibleReflexes",
+      "ultimateStrength",
+      "steelSkin",
+      "mysticLore",
+      "hawkEye",
+      "improvedReflexes",
+      "superStrength",
+      "rockSkin",
+      "mysticWill",
+      "sharpEye",
+      "clarityThought",
+      "burstStrength",
+      "thickSkin"
+    ]
   },
   "augury": {
     "stats": {
@@ -359,6 +633,25 @@
       "rangedStrength": 1,
       "prayerDrain": 24
     },
-    "conflictWith": []
+    "conflictWith": [
+      "rigour",
+      "piety",
+      "chivalry",
+      "mysticMight",
+      "eagleEye",
+      "incredibleReflexes",
+      "ultimateStrength",
+      "steelSkin",
+      "mysticLore",
+      "hawkEye",
+      "improvedReflexes",
+      "superStrength",
+      "rockSkin",
+      "mysticWill",
+      "sharpEye",
+      "clarityThought",
+      "burstStrength",
+      "thickSkin"
+    ]
   }
 }
