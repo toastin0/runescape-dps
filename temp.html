@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        background-color: #111111;
+      }
+    </style>
+  </head>
+  <body>
+      <img src="public/prayers/Thick_Skin.png" alt="" />
+      <img src="public/prayers/Burst_of_Strength.png" alt="" />
+      <img src="public/prayers/Clarity_of_Thought.png" alt="" />
+      <img src="public/prayers/Sharp_Eye.png" alt="" />
+      <img src="public/prayers/Mystic_Will.png" alt="" />
+      <img src="public/prayers/Rock_Skin.png" alt="" />
+      <img src="public/prayers/Superhuman_Strength.png" alt="" />
+      <img src="public/prayers/Improved_Reflexes.png" alt="" />
+      <img src="public/prayers/Rapid_Restore.png" alt="" />
+      <img src="public/prayers/Rapid_Heal.png" alt="" />
+      <img src="public/prayers/Protect_Item.png" alt="" />
+      <img src="public/prayers/Hawk_Eye.png" alt="" />
+      <img src="public/prayers/Mystic_Lore.png" alt="" />
+      <img src="public/prayers/Steel_Skin.png" alt="" />
+      <img src="public/prayers/Ultimate_Strength.png" alt="" />
+      <img src="public/prayers/Incredible_Reflexes.png" alt="" />
+      <img src="public/prayers/Protect_from_Magic.png" alt="" />
+      <img src="public/prayers/Protect_from_Missiles.png" alt="" />
+      <img src="public/prayers/Protect_from_Melee.png" alt="" />
+      <img src="public/prayers/Eagle_Eye.png" alt="" />
+      <img src="public/prayers/Mystic_Might.png" alt="" />
+      <img src="public/prayers/Retribution.png" alt="" />
+      <img src="public/prayers/Redemption.png" alt="" />
+      <img src="public/prayers/Smite.png" alt="" />
+      <img src="public/prayers/Preserve.png" alt="" />
+      <img src="public/prayers/Chivalry.png" alt="" />
+      <img src="public/prayers/Piety.png" alt="" />
+      <img src="public/prayers/Rigour.png" alt="" />
+      <img src="public/prayers/Augury.png" alt="" />
+    <div>
+      <textarea rows="10" cols="80"></textarea>
+    </div>
+    <button id="clear">clear</button>
+    <script async="false">
+      let prayers = document.querySelectorAll("img");
+      let counter = 0
+      let clickedPrayers = []
+      const text = document.querySelector("textarea")
+      document.getElementById("clear").onclick = clear
+      let prayerNameArray = [
+        "thickSkin",
+        "burstStrength",
+        "clarityThought",
+        "sharpEye",
+        "mysticWill",
+        "rockSkin",
+        "superStrength",
+        "improvedReflexes",
+        "rapidRestore",
+        "rapidHeal",
+        "protItem",
+        "hawkEye",
+        "mysticLore",
+        "steelSkin",
+        "ultimateStrength",
+        "incredibleReflexes",
+        "protMagic",
+        "protRanged",
+        "protMelee",
+        "eagleEye",
+        "mysticMight",
+        "retribution",
+        "redemption",
+        "smite",
+        "preserve",
+        "chivalry",
+        "piety",
+        "rigour",
+        "augury"
+      ]
+      prayers.forEach(val => {
+        val.alt = prayerNameArray[counter]
+        counter++
+      })
+      prayers.forEach(val => {
+        val.addEventListener("click",(e) => {
+          clickedPrayers.includes(`${e.target.alt}`) ? 
+          clickedPrayers.pop(clickedPrayers.indexOf(`${e.target.alt}`))
+          : clickedPrayers.push(`${e.target.alt}`)
+          updateText()
+        })
+        
+      })
+      function updateText() {
+        text.innerText = `"${clickedPrayers.join(`", "`)}"`
+      }
+      function clear(e) {
+        clickedPrayers = []
+        updateText()
+      }
+      </script>
+  </body>
+</html>

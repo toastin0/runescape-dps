@@ -1,0 +1,364 @@
+{
+  "thickSkin": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1.05,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 3
+    },
+    "conflictWith": ["rockSkin", "steelSkin", "chivalry", "piety", "rigour", "augury"]
+  },
+  "burstStrength": {
+    "stats": {
+      "attack": 1,
+      "strength": 1.05,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 3
+    },
+    "conflictWith": [
+      "sharpEye",
+      "mysticWill",
+      "superStrength",
+      "hawkEye",
+      "mysticLore",
+      "ultimateStrength",
+      "eagleEye",
+      "mysticMight",
+      "chivalry",
+      "piety",
+      "rigour",
+      "augury"
+    ]
+  },
+
+  "clarityThought": {
+    "stats": {
+      "attack": 1.05,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 3
+    },
+    "conflictWith": []
+  },
+  "sharpEye": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1.05,
+      "rangedStrength": 1.05,
+      "prayerDrain": 3
+    },
+    "conflictWith": []
+  },
+  "mysticWill": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1.05,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 3
+    },
+    "conflictWith": []
+  },
+  "rockSkin": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1.1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 6
+    },
+    "conflictWith": []
+  },
+  "superStrength": {
+    "stats": {
+      "attack": 1,
+      "strength": 1.1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 6
+    },
+    "conflictWith": []
+  },
+  "improvedReflexes": {
+    "stats": {
+      "attack": 1.1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 6
+    },
+    "conflictWith": []
+  },
+  "rapidRestore": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 1
+    },
+    "conflictWith": []
+  },
+  "rapidHeal": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 2
+    },
+    "conflictWith": []
+  },
+  "protItem": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 2
+    },
+    "conflictWith": []
+  },
+  "hawkEye": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1.1,
+      "rangedStrength": 1.1,
+      "prayerDrain": 6
+    },
+    "conflictWith": []
+  },
+  "mysticLore": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1.1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 6
+    },
+    "conflictWith": []
+  },
+  "steelSkin": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1.15,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 12
+    },
+    "conflictWith": []
+  },
+  "ultimateStrength": {
+    "stats": {
+      "attack": 1,
+      "strength": 1.15,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 12
+    },
+    "conflictWith": []
+  },
+  "incredibleReflexes": {
+    "stats": {
+      "attack": 1.15,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 12
+    },
+    "conflictWith": []
+  },
+  "protMagic": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 12
+    },
+    "conflictWith": []
+  },
+  "protRanged": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 12
+    },
+    "conflictWith": []
+  },
+  "protMelee": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 12
+    },
+    "conflictWith": []
+  },
+  "eagleEye": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1.15,
+      "rangedStrength": 1.15,
+      "prayerDrain": 12
+    },
+    "conflictWith": []
+  },
+  "mysticMight": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1.15,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 1
+    },
+    "conflictWith": []
+  },
+  "retribution": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 3
+    },
+    "conflictWith": []
+  },
+  "redemption": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 6
+    },
+    "conflictWith": []
+  },
+  "smite": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 6
+    },
+    "conflictWith": []
+  },
+  "preserve": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 2
+    },
+    "conflictWith": []
+  },
+  "chivalry": {
+    "stats": {
+      "attack": 1.15,
+      "strength": 1.18,
+      "magic": 1,
+      "defence": 1.2,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 24
+    },
+    "conflictWith": []
+  },
+  "piety": {
+    "stats": {
+      "attack": 1.2,
+      "strength": 1.23,
+      "magic": 1,
+      "defence": 1.25,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 24
+    },
+    "conflictWith": []
+  },
+  "rigour": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1,
+      "defence": 1.25,
+      "ranged": 1.2,
+      "rangedStrength": 1.23,
+      "prayerDrain": 24
+    },
+    "conflictWith": []
+  },
+  "augury": {
+    "stats": {
+      "attack": 1,
+      "strength": 1,
+      "magic": 1.25,
+      "defence": 1.25,
+      "ranged": 1,
+      "rangedStrength": 1,
+      "prayerDrain": 24
+    },
+    "conflictWith": []
+  }
+}
