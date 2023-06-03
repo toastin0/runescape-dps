@@ -1,5 +1,5 @@
-import prayerData from "../../public/data/prayers.json"
-export type prayerKeys = keyof typeof prayerData
+import prayerData from "../../public/data/prayers.json";
+export type prayerKeys = keyof typeof prayerData;
 
 export interface prayerEnabled {
   thickSkin: boolean;

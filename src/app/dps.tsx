@@ -1,31 +1,30 @@
 import React, { useState } from "react";
 import Prayergrid from "./Prayergrid";
-import prayerData from "../../public/data/prayers.json"
+import prayerData from "../../public/data/prayers.json";
 import { prayerKeys } from "./types";
-
 
 export default function Dps() {
   const playerStats: {
-    atkStab: number,
-    atkSlash: number,
-    atkCrush: number,
-    atkMagic: number,
-    atkRange: number,
-    defStab: number,
-    defSlash: number,
-    defCrush: number,
-    defMagic: number,
-    defRange: number,
-    meleeStr: number,
-    rangedStr: number,
-    magicDmg: number,
-    prayerBonus: number,
-    atkSpeed: number,
-    undeadBonus: number,
-    slayerBonus: number,
-    setEffect: string[]
-    activePrayers: Object[]
-    } = {
+    atkStab: number;
+    atkSlash: number;
+    atkCrush: number;
+    atkMagic: number;
+    atkRange: number;
+    defStab: number;
+    defSlash: number;
+    defCrush: number;
+    defMagic: number;
+    defRange: number;
+    meleeStr: number;
+    rangedStr: number;
+    magicDmg: number;
+    prayerBonus: number;
+    atkSpeed: number;
+    undeadBonus: number;
+    slayerBonus: number;
+    setEffect: string[];
+    activePrayers: Object[];
+  } = {
     atkStab: 0,
     atkSlash: 0,
     atkCrush: 0,
@@ -44,24 +43,27 @@ export default function Dps() {
     undeadBonus: 0,
     slayerBonus: 0,
     setEffect: [],
-    activePrayers: []
-  }
+    activePrayers: [],
+  };
 
   function handlePrayerClick(prayerName: prayerKeys) {
-    const clickedPrayer = prayerData[prayerName]
-    const newState = {...currentPrayers}
-    newState[prayerName] = ! newState[prayerName]
+    const clickedPrayer = prayerData[prayerName];
+    const newState = { ...currentPrayers };
+    newState[prayerName] = !newState[prayerName];
     if (playerStats.activePrayers.includes(clickedPrayer)) {
-      playerStats.activePrayers.splice(playerStats.activePrayers.indexOf(prayerData[prayerName]), 1)
+      playerStats.activePrayers.splice(
+        playerStats.activePrayers.indexOf(prayerData[prayerName]),
+        1
+      );
     } else {
-      playerStats.activePrayers.push(prayerData[prayerName])
+      playerStats.activePrayers.push(prayerData[prayerName]);
       clickedPrayer.conflictWith.forEach((arg) => {
         newState[arg as prayerKeys] = false;
-      })
+      });
     }
     // there has to be a better way to do this, but i don't know how
-    
-    setCurrentPrayers(newState)
+
+    setCurrentPrayers(newState);
   }
   const [currentPrayers, setCurrentPrayers] = useState({
     // this is only used for displaying the prayers, the actual calculations are done

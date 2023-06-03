@@ -3,7 +3,6 @@ import Prayer from "./Prayer";
 import style from "./Prayer.module.css";
 import { prayerEnabled, prayerKeys } from "./types";
 
-
 // to whom it may concern: i am sorry
 export default function Prayergrid({
   prayerBook,
@@ -30,7 +29,7 @@ export default function Prayergrid({
           alt="Burst of Strength"
           isActive={prayerState.burstStrength}
           onPress={() => {
-            prayerModify("burstStrength")
+            prayerModify("burstStrength");
           }}
         ></Prayer>
         <Prayer
@@ -38,7 +37,7 @@ export default function Prayergrid({
           alt="Clarity of Thought"
           isActive={prayerState.clarityThought}
           onPress={() => {
-            prayerModify("clarityThought")
+            prayerModify("clarityThought");
           }}
         ></Prayer>
         <Prayer
@@ -46,7 +45,7 @@ export default function Prayergrid({
           alt="Sharp Eye"
           isActive={prayerState.sharpEye}
           onPress={() => {
-            prayerModify("sharpEye")
+            prayerModify("sharpEye");
           }}
         ></Prayer>
         <Prayer
@@ -54,7 +53,7 @@ export default function Prayergrid({
           alt="Mystic Will"
           isActive={prayerState.mysticWill}
           onPress={() => {
-            prayerModify("mysticWill")
+            prayerModify("mysticWill");
           }}
         ></Prayer>
 
@@ -63,7 +62,7 @@ export default function Prayergrid({
           alt="Rock Skin"
           isActive={prayerState.rockSkin}
           onPress={() => {
-            prayerModify("rockSkin")
+            prayerModify("rockSkin");
           }}
         ></Prayer>
         <Prayer
@@ -71,7 +70,7 @@ export default function Prayergrid({
           alt="Superhuman Strength"
           isActive={prayerState.superStrength}
           onPress={() => {
-            prayerModify("superStrength")
+            prayerModify("superStrength");
           }}
         ></Prayer>
         <Prayer
@@ -79,7 +78,7 @@ export default function Prayergrid({
           alt="Improved Reflexes"
           isActive={prayerState.improvedReflexes}
           onPress={() => {
-            prayerModify("improvedReflexes")
+            prayerModify("improvedReflexes");
           }}
         ></Prayer>
         <Prayer
@@ -87,7 +86,7 @@ export default function Prayergrid({
           alt="Rapid Restore"
           isActive={prayerState.rapidRestore}
           onPress={() => {
-            prayerModify("rapidRestore")
+            prayerModify("rapidRestore");
           }}
         ></Prayer>
         <Prayer
@@ -95,7 +94,7 @@ export default function Prayergrid({
           alt="Rapid Heal"
           isActive={prayerState.rapidHeal}
           onPress={() => {
-            prayerModify("rapidHeal")
+            prayerModify("rapidHeal");
           }}
         ></Prayer>
 
@@ -104,7 +103,7 @@ export default function Prayergrid({
           alt="Protect Item"
           isActive={prayerState.protItem}
           onPress={() => {
-            prayerModify("protItem")
+            prayerModify("protItem");
           }}
         ></Prayer>
         <Prayer
@@ -112,7 +111,7 @@ export default function Prayergrid({
           alt="Hawk Eye"
           isActive={prayerState.hawkEye}
           onPress={() => {
-            prayerModify("hawkEye")
+            prayerModify("hawkEye");
           }}
         ></Prayer>
         <Prayer
@@ -120,7 +119,7 @@ export default function Prayergrid({
           alt="Mystic Lore"
           isActive={prayerState.mysticLore}
           onPress={() => {
-            prayerModify("mysticLore")
+            prayerModify("mysticLore");
           }}
         ></Prayer>
         <Prayer
@@ -128,7 +127,7 @@ export default function Prayergrid({
           alt="Steel Skin"
           isActive={prayerState.steelSkin}
           onPress={() => {
-            prayerModify("steelSkin")
+            prayerModify("steelSkin");
           }}
         ></Prayer>
         <Prayer
@@ -136,7 +135,7 @@ export default function Prayergrid({
           alt="Ultimate Strength"
           isActive={prayerState.ultimateStrength}
           onPress={() => {
-            prayerModify("ultimateStrength")
+            prayerModify("ultimateStrength");
           }}
         ></Prayer>
 
@@ -145,7 +144,7 @@ export default function Prayergrid({
           alt="Incredible Reflexes"
           isActive={prayerState.incredibleReflexes}
           onPress={() => {
-            prayerModify("incredibleReflexes")
+            prayerModify("incredibleReflexes");
           }}
         ></Prayer>
         <Prayer
@@ -153,7 +152,7 @@ export default function Prayergrid({
           alt="Protect from Magic"
           isActive={prayerState.protMagic}
           onPress={() => {
-            prayerModify("protMagic")
+            prayerModify("protMagic");
           }}
         ></Prayer>
         <Prayer
@@ -161,7 +160,7 @@ export default function Prayergrid({
           alt="Protect from Missiles"
           isActive={prayerState.protRanged}
           onPress={() => {
-            prayerModify("protRanged")
+            prayerModify("protRanged");
           }}
         ></Prayer>
         <Prayer
@@ -169,7 +168,7 @@ export default function Prayergrid({
           alt="Protect from Melee"
           isActive={prayerState.protMelee}
           onPress={() => {
-            prayerModify("protMelee")
+            prayerModify("protMelee");
           }}
         ></Prayer>
         <Prayer
@@ -177,7 +176,7 @@ export default function Prayergrid({
           alt="Eagle Eye"
           isActive={prayerState.eagleEye}
           onPress={() => {
-            prayerModify("eagleEye")
+            prayerModify("eagleEye");
           }}
         ></Prayer>
 
@@ -186,7 +185,7 @@ export default function Prayergrid({
           alt="Mystic Might"
           isActive={prayerState.mysticMight}
           onPress={() => {
-            prayerModify("mysticMight")
+            prayerModify("mysticMight");
           }}
         ></Prayer>
         <Prayer
@@ -194,7 +193,7 @@ export default function Prayergrid({
           alt="Retribution"
           isActive={prayerState.retribution}
           onPress={() => {
-            prayerModify("retribution")
+            prayerModify("retribution");
           }}
         ></Prayer>
         <Prayer
@@ -202,7 +201,7 @@ export default function Prayergrid({
           alt="Redemption"
           isActive={prayerState.redemption}
           onPress={() => {
-            prayerModify("redemption")
+            prayerModify("redemption");
           }}
         ></Prayer>
         <Prayer
@@ -210,7 +209,7 @@ export default function Prayergrid({
           alt="Smite"
           isActive={prayerState.smite}
           onPress={() => {
-            prayerModify("smite")
+            prayerModify("smite");
           }}
         ></Prayer>
         <Prayer
@@ -218,7 +217,7 @@ export default function Prayergrid({
           alt="Preserve"
           isActive={prayerState.preserve}
           onPress={() => {
-            prayerModify("preserve")
+            prayerModify("preserve");
           }}
         ></Prayer>
 
@@ -227,7 +226,7 @@ export default function Prayergrid({
           alt="Chivalry"
           isActive={prayerState.chivalry}
           onPress={() => {
-            prayerModify("chivalry")
+            prayerModify("chivalry");
           }}
         ></Prayer>
         <Prayer
@@ -235,7 +234,7 @@ export default function Prayergrid({
           alt="Piety"
           isActive={prayerState.piety}
           onPress={() => {
-            prayerModify("piety")
+            prayerModify("piety");
           }}
         ></Prayer>
         <Prayer
@@ -243,7 +242,7 @@ export default function Prayergrid({
           alt="Rigour"
           isActive={prayerState.rigour}
           onPress={() => {
-            prayerModify("rigour")
+            prayerModify("rigour");
           }}
         ></Prayer>
         <Prayer
@@ -251,7 +250,7 @@ export default function Prayergrid({
           alt="Augury"
           isActive={prayerState.augury}
           onPress={() => {
-            prayerModify("augury")
+            prayerModify("augury");
           }}
         ></Prayer>
       </div>
