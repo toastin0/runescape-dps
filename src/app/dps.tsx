@@ -1,40 +1,71 @@
 import React, { useState } from "react";
 import Prayergrid from "./Prayergrid";
+import prayerData from "../../public/data/prayers.json"
+import { prayerKeys } from "./types";
 
-export interface normalPrayers {
-  thickSkin: boolean;
-  burstStrength: boolean;
-  clarityThought: boolean;
-  sharpEye: boolean;
-  mysticWill: boolean;
-  rockSkin: boolean;
-  superStrength: boolean;
-  improvedReflexes: boolean;
-  rapidRestore: boolean;
-  rapidHeal: boolean;
-  protItem: boolean;
-  hawkEye: boolean; // nice hawk
-  mysticLore: boolean;
-  steelSkin: boolean;
-  ultimateStrength: boolean;
-  incredibleReflexes: boolean;
-  protMagic: boolean;
-  protRanged: boolean;
-  protMelee: boolean;
-  eagleEye: boolean;
-  mysticMight: boolean;
-  retribution: boolean;
-  redemption: boolean;
-  smite: boolean;
-  preserve: boolean;
-  chivalry: boolean;
-  piety: boolean;
-  rigour: boolean;
-  augury: boolean;
-}
 
 export default function Dps() {
+  const playerStats: {
+    atkStab: number,
+    atkSlash: number,
+    atkCrush: number,
+    atkMagic: number,
+    atkRange: number,
+    defStab: number,
+    defSlash: number,
+    defCrush: number,
+    defMagic: number,
+    defRange: number,
+    meleeStr: number,
+    rangedStr: number,
+    magicDmg: number,
+    prayerBonus: number,
+    atkSpeed: number,
+    undeadBonus: number,
+    slayerBonus: number,
+    setEffect: string[]
+    activePrayers: Object[]
+    } = {
+    atkStab: 0,
+    atkSlash: 0,
+    atkCrush: 0,
+    atkMagic: 0,
+    atkRange: 0,
+    defStab: 0,
+    defSlash: 0,
+    defCrush: 0,
+    defMagic: 0,
+    defRange: 0,
+    meleeStr: 0,
+    rangedStr: 0,
+    magicDmg: 0,
+    prayerBonus: 0,
+    atkSpeed: 4,
+    undeadBonus: 0,
+    slayerBonus: 0,
+    setEffect: [],
+    activePrayers: []
+  }
+
+  function handlePrayerClick(prayerName: prayerKeys) {
+    const clickedPrayer = prayerData[prayerName]
+    const newState = {...currentPrayers}
+    newState[prayerName] = ! newState[prayerName]
+    if (playerStats.activePrayers.includes(clickedPrayer)) {
+      playerStats.activePrayers.splice(playerStats.activePrayers.indexOf(prayerData[prayerName]), 1)
+    } else {
+      playerStats.activePrayers.push(prayerData[prayerName])
+      clickedPrayer.conflictWith.forEach((arg) => {
+        newState[arg as prayerKeys] = false;
+      })
+    }
+    // there has to be a better way to do this, but i don't know how
+    
+    setCurrentPrayers(newState)
+  }
   const [currentPrayers, setCurrentPrayers] = useState({
+    // this is only used for displaying the prayers, the actual calculations are done
+    // in another place TODO: say where the place is
     thickSkin: false,
     burstStrength: false,
     clarityThought: false,
@@ -72,7 +103,7 @@ export default function Dps() {
       <Prayergrid
         prayerBook="normal"
         prayerState={currentPrayers}
-        prayerModify={setCurrentPrayers}
+        prayerModify={handlePrayerClick}
       ></Prayergrid>
     </div>
   );

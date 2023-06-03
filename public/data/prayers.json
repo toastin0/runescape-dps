@@ -511,7 +511,7 @@
       "prayerDrain": 6
     },
     "conflictWith": [
-      "smite",
+      "protMagic",
       "retribution",
       "protMelee",
       "protRanged",
@@ -541,7 +541,6 @@
       "prayerDrain": 24
     },
     "conflictWith": [
-      "chivalry",
       "mysticMight",
       "eagleEye",
       "incredibleReflexes",
@@ -572,7 +571,6 @@
       "prayerDrain": 24
     },
     "conflictWith": [
-      "piety",
       "rigour",
       "augury",
       "mysticMight",
