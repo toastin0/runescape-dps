@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Prayergrid from "./Prayergrid";
 import prayerData from "../../public/data/prayers.json";
-import { prayerKeys } from "./types";
+import { prayerKeys, levels } from "./types";
 
 export default function Dps() {
+  
   const playerStats: {
     atkStab: number;
     atkSlash: number;
@@ -24,6 +25,7 @@ export default function Dps() {
     slayerBonus: number;
     setEffect: string[];
     activePrayers: Object[];
+    levels: levels;
   } = {
     atkStab: 0,
     atkSlash: 0,
@@ -44,7 +46,26 @@ export default function Dps() {
     slayerBonus: 0,
     setEffect: [],
     activePrayers: [],
+    levels: {
+      strength: 1,
+      attack: 1,
+      defence: 1,
+      ranged: 1,
+      magic: 1,
+      hitpoints: 10,
+      prayer: 1,
+    },
   };
+  
+  function changeLevel(level: keyof typeof playerStats.levels, value: number) {
+    let roundedInput = Math.round(value)
+    if (roundedInput > 99) {
+      roundedInput = 99
+    } 
+    if (roundedInput < 0) {
+      roundedInput = 1
+    }
+  }
 
   function handlePrayerClick(prayerName: prayerKeys) {
     const clickedPrayer = prayerData[prayerName];

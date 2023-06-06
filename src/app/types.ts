@@ -42,3 +42,13 @@ export interface conflictData {
   overhead: boolean;
   tier: number;
 }
+
+export interface levels {
+    strength: number;
+    attack: number;
+    defence: number;
+    ranged: number;
+    magic: number;
+    hitpoints: number;
+    prayer: number;
+  }
