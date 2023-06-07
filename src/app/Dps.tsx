@@ -4,6 +4,7 @@ import prayerData from "../../public/data/prayers.json";
 import { prayerKeys, IPlayerStats, ILevels } from "./types";
 import PlayerLookup from "./PlayerLookup";
 import { lookupByRSN } from "./osrs-hiscores";
+import StatOverview from "./StatOverview";
 
 export default function Dps() {
   const [currentPrayers, setCurrentPrayers] = useState({
@@ -118,6 +119,7 @@ export default function Dps() {
           setPlayerStats({...playerStats, levels: response})
         })
       }}></PlayerLookup>
+      <StatOverview levelState={playerStats.levels}></StatOverview>
     </div>
   );
 }
