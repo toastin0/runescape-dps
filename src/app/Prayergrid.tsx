@@ -257,8 +257,8 @@ export default function Prayergrid({
     </div>
   );
 
-  const ruinousBook = <></>;
   // define this when the book comes out
+  const ruinousBook = <></>;
 
   return normalBook;
 }

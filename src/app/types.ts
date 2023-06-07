@@ -1,6 +1,29 @@
 import prayerData from "../../public/data/prayers.json";
 export type prayerKeys = keyof typeof prayerData;
 
+export interface IPlayerStats {
+  atkStab: number;
+  atkSlash: number;
+  atkCrush: number;
+  atkMagic: number;
+  atkRange: number;
+  defStab: number;
+  defSlash: number;
+  defCrush: number;
+  defMagic: number;
+  defRange: number;
+  meleeStr: number;
+  rangedStr: number;
+  magicDmg: number;
+  prayerBonus: number;
+  atkSpeed: number;
+  undeadBonus: number;
+  slayerBonus: number;
+  setEffect: string[];
+  activePrayers: Object[];
+  levels: ILevels;
+}
+
 export interface prayerEnabled {
   thickSkin: boolean;
   burstStrength: boolean;
@@ -43,12 +66,12 @@ export interface conflictData {
   tier: number;
 }
 
-export interface levels {
-    strength: number;
-    attack: number;
-    defence: number;
-    ranged: number;
-    magic: number;
-    hitpoints: number;
-    prayer: number;
-  }
+export interface ILevels {
+  strength: number;
+  attack: number;
+  defence: number;
+  ranged: number;
+  magic: number;
+  hitpoints: number;
+  prayer: number;
+}
