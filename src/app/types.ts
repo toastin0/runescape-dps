@@ -20,7 +20,6 @@ export interface IPlayerStats {
   undeadBonus: number;
   slayerBonus: number;
   setEffect: string[];
-  activePrayers: Object[];
   levels: ILevels;
 }
 

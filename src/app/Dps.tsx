@@ -60,7 +60,6 @@ export default function Dps() {
     undeadBonus: 0,
     slayerBonus: 0,
     setEffect: [],
-    activePrayers: [],
     levels: {
       strength: 1,
       attack: 1,
@@ -89,13 +88,7 @@ export default function Dps() {
     const clickedPrayer = prayerData[prayerName];
     const newState = { ...currentPrayers };
     newState[prayerName] = !newState[prayerName];
-    if (playerStats.activePrayers.includes(clickedPrayer)) {
-      playerStats.activePrayers.splice(
-        playerStats.activePrayers.indexOf(prayerData[prayerName]),
-        1
-      );
-    } else {
-      playerStats.activePrayers.push(prayerData[prayerName]);
+    if (newState[prayerName] === true) {
       clickedPrayer.conflictWith.forEach((arg) => {
         newState[arg as prayerKeys] = false;
       });
