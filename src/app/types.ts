@@ -23,7 +23,7 @@ export interface IPlayerStats {
   levels: ILevels;
 }
 
-export interface prayerEnabled {
+export interface IPrayerEnabled {
   thickSkin: boolean;
   burstStrength: boolean;
   clarityThought: boolean;

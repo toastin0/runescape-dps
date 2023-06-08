@@ -1,7 +1,7 @@
 import React from "react";
 import Prayer from "./Prayer";
 import style from "./Prayer.module.css";
-import { prayerEnabled, prayerKeys } from "./types";
+import { IPrayerEnabled, prayerKeys } from "./types";
 
 // to whom it may concern: i am sorry
 export default function Prayergrid({
@@ -10,7 +10,7 @@ export default function Prayergrid({
   prayerModify,
 }: {
   prayerBook: "normal" | "ruinous";
-  prayerState: prayerEnabled;
+  prayerState: IPrayerEnabled;
   prayerModify: (prayerName: prayerKeys) => void;
 }) {
   const normalBook = (

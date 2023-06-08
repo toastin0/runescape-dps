@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Prayergrid from "./Prayergrid";
 import prayerData from "../../public/data/prayers.json";
-import { prayerKeys, IPlayerStats, ILevels } from "./types";
+import { prayerKeys, IPlayerStats } from "./types";
 import PlayerLookup from "./PlayerLookup";
 import { lookupByRSN } from "./osrs-hiscores";
 import StatOverview from "./StatOverview";
@@ -9,7 +9,6 @@ import StatOverview from "./StatOverview";
 export default function Dps() {
   const [currentPrayers, setCurrentPrayers] = useState({
     // this is only used for displaying the prayers, the actual calculations are done *elsewhere*
-
     thickSkin: false,
     burstStrength: false,
     clarityThought: false,
@@ -84,6 +83,14 @@ export default function Dps() {
     setPlayerStats(newState);
   }
 
+  function getActivePrayers(
+    prayerObj: typeof currentPrayers
+  ): (keyof typeof currentPrayers)[] {
+    return Object.entries(prayerObj)
+      .filter((val) => val[1])
+      .map((val) => val[0] as keyof typeof currentPrayers);
+  }
+
   function handlePrayerClick(prayerName: prayerKeys) {
     const clickedPrayer = prayerData[prayerName];
     const newState = { ...currentPrayers };
@@ -93,11 +100,8 @@ export default function Dps() {
         newState[arg as prayerKeys] = false;
       });
     }
-    // there has to be a better way to do this, but i don't know how
-
     setCurrentPrayers(newState);
   }
-
   return (
     <div>
       <h1>runescape dps</h1>
@@ -107,11 +111,13 @@ export default function Dps() {
         prayerState={currentPrayers}
         prayerModify={handlePrayerClick}
       ></Prayergrid>
-      <PlayerLookup onSubmit={(name: string) => {
-        lookupByRSN(name).then(response => {
-          setPlayerStats({...playerStats, levels: response})
-        })
-      }}></PlayerLookup>
+      <PlayerLookup
+        onSubmit={(name: string) => {
+          lookupByRSN(name).then((response) => {
+            setPlayerStats({ ...playerStats, levels: response });
+          });
+        }}
+      ></PlayerLookup>
       <StatOverview levelState={playerStats.levels}></StatOverview>
     </div>
   );

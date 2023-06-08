@@ -1,6 +1,5 @@
 import { ILevels } from "./types";
 
-
 export async function lookupByRSN(name: string): Promise<ILevels> {
   // this is bad code
   // see: https://runescape.wiki/w/Application_programming_interface#Hiscores_Lite_2
@@ -9,8 +8,7 @@ export async function lookupByRSN(name: string): Promise<ILevels> {
     // this is because jagex did not properly implement CORS
 
     // @todo: make this not hard coded
-    const baseURLString = 
-      "http://localhost:3000/pull-from-jagex?player="
+    const baseURLString = "http://localhost:3000/pull-from-jagex?player=";
     const sanName = name
       .split("")
       .filter((x) => !/[^0-9a-z\s]/gi.test(x))
@@ -34,8 +32,8 @@ export async function lookupByRSN(name: string): Promise<ILevels> {
           hitpoints: statsArr[3],
           ranged: statsArr[4],
           prayer: statsArr[5],
-          magic: statsArr[6]
-        }
+          magic: statsArr[6],
+        };
         resolve(levelsInOrder);
       });
     });
