@@ -1,4 +1,4 @@
-import style from "./StatInput.module.css";
+import style from "./SkillInput.module.css";
 import { ILevels } from "./types";
 
 export default function SkillInput({
