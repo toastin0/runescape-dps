@@ -1,5 +1,4 @@
-import react from "react";
-import { ILevels } from "./types";
+import style from './inputs.module.css'
 
 export default function PlayerLookup({
   onSubmit: submitFn,
@@ -18,11 +17,12 @@ export default function PlayerLookup({
           );
         }}
       >
-        <label>
+        <label className={style.statLabel}>
           RSN
-          <input name="rsn-input"></input>
+          <input name="rsn-input" className={style.nameLookup}></input>
+          <button type="submit">Lookup</button>
         </label>
-        <button type="submit">Lookup</button>
+
       </form>
     </>
   );

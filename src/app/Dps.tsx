@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Prayergrid from "./Prayergrid";
 import prayerData from "../../public/data/prayers.json";
-import { prayerKeys, IPlayerStats } from "./types";
-import PlayerLookup from "./PlayerLookup";
+import { prayerKeys, IPlayerStats, ActiveTab } from "./types";
 import { lookupByRSN } from "./osrs-hiscores";
 import StatOverview from "./StatOverview";
-
+import Menubar from "./Menubar";
+import PlayerLookup from "./PlayerLookup";
 export default function Dps() {
+  const [currentTab, setCurrentTab] = useState<ActiveTab>(ActiveTab.Setup)
   const [currentPrayers, setCurrentPrayers] = useState({
     // this is only used for displaying the prayers, the actual calculations are done *elsewhere*
     thickSkin: false,
@@ -104,21 +105,21 @@ export default function Dps() {
   }
   return (
     <div>
-      <h1>runescape dps</h1>
-      <h2>yeah i bet you want to know</h2>
+      <Menubar currentTab={currentTab} changeTab={setCurrentTab}></Menubar>
       <Prayergrid
         prayerBook="normal"
         prayerState={currentPrayers}
         prayerModify={handlePrayerClick}
       ></Prayergrid>
-      <PlayerLookup
-        onSubmit={(name: string) => {
+      <PlayerLookup onSubmit={(name: string) => {
           lookupByRSN(name).then((response) => {
             setPlayerStats({ ...playerStats, levels: response });
           });
-        }}
-      ></PlayerLookup>
-      <StatOverview changeLevel={changeLevel} levelState={playerStats.levels}></StatOverview>
+        }}></PlayerLookup>
+      <StatOverview
+        changeLevel={changeLevel}
+        levelState={playerStats.levels}
+      ></StatOverview>
     </div>
   );
 }

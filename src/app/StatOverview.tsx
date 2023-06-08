@@ -1,5 +1,5 @@
 import { ILevels } from "./types";
-
+import style from "./inputs.module.css";
 export default function StatOverview({
   levelState: levels,
   changeLevel: changeLevel,
@@ -8,11 +8,12 @@ export default function StatOverview({
   changeLevel: (prayerName: keyof ILevels, lvl: number) => void;
 }) {
   return (
-    <div className="player-stats">
+    <div className={style.statDisplay}>
       <form>
-        <label>
+        <label className={style.statLabel}>
           Attack:
           <input
+            className={style.statInput}
             type="number"
             value={levels.attack}
             onChange={(e) =>
@@ -20,9 +21,10 @@ export default function StatOverview({
             }
           ></input>
         </label>
-        <label>
+        <label className={style.statLabel}>
           Strength:
           <input
+            className={style.statInput}
             type="number"
             value={levels.strength}
             onChange={(e) =>
@@ -30,9 +32,10 @@ export default function StatOverview({
             }
           ></input>
         </label>
-        <label>
+        <label className={style.statLabel}>
           Defence:
           <input
+            className={style.statInput}
             type="number"
             value={levels.defence}
             onChange={(e) =>
@@ -40,9 +43,10 @@ export default function StatOverview({
             }
           ></input>
         </label>
-        <label>
+        <label className={style.statLabel}>
           Ranged:
           <input
+            className={style.statInput}
             type="number"
             value={levels.ranged}
             onChange={(e) =>
@@ -50,9 +54,10 @@ export default function StatOverview({
             }
           ></input>
         </label>
-        <label>
+        <label className={style.statLabel}>
           Prayer:
           <input
+            className={style.statInput}
             type="number"
             value={levels.prayer}
             onChange={(e) =>
@@ -60,19 +65,19 @@ export default function StatOverview({
             }
           ></input>
         </label>
-        <label>
+        <label className={style.statLabel}>
           Magic:
           <input
+            className={style.statInput}
             type="number"
             value={levels.magic}
-            onChange={(e) =>
-              changeLevel("magic", parseInt(e.target.value, 10))
-            }
+            onChange={(e) => changeLevel("magic", parseInt(e.target.value, 10))}
           ></input>
         </label>
-        <label>
+        <label className={style.statLabel}>
           Hitpoints:
           <input
+            className={style.statInput}
             type="number"
             value={levels.hitpoints}
             onChange={(e) =>

@@ -74,3 +74,8 @@ export interface ILevels {
   hitpoints: number;
   prayer: number;
 }
+
+export enum ActiveTab {
+  Setup,
+  Results
+}
