@@ -118,7 +118,7 @@ export default function Dps() {
           });
         }}
       ></PlayerLookup>
-      <StatOverview levelState={playerStats.levels}></StatOverview>
+      <StatOverview changeLevel={changeLevel} levelState={playerStats.levels}></StatOverview>
     </div>
   );
 }
