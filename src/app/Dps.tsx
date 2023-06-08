@@ -7,7 +7,7 @@ import StatOverview from "./StatOverview";
 import Menubar from "./Menubar";
 import PlayerLookup from "./PlayerLookup";
 export default function Dps() {
-  const [currentTab, setCurrentTab] = useState<ActiveTab>(ActiveTab.Setup)
+  const [currentTab, setCurrentTab] = useState<ActiveTab>(ActiveTab.Setup);
   const [currentPrayers, setCurrentPrayers] = useState({
     // this is only used for displaying the prayers, the actual calculations are done *elsewhere*
     thickSkin: false,
@@ -111,11 +111,13 @@ export default function Dps() {
         prayerState={currentPrayers}
         prayerModify={handlePrayerClick}
       ></Prayergrid>
-      <PlayerLookup onSubmit={(name: string) => {
+      <PlayerLookup
+        onSubmit={(name: string) => {
           lookupByRSN(name).then((response) => {
             setPlayerStats({ ...playerStats, levels: response });
           });
-        }}></PlayerLookup>
+        }}
+      ></PlayerLookup>
       <StatOverview
         changeLevel={changeLevel}
         levelState={playerStats.levels}

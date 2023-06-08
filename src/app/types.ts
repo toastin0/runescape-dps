@@ -55,16 +55,6 @@ export interface IPrayerEnabled {
   augury: boolean;
 }
 
-export interface conflictData {
-  strength: boolean;
-  attack: boolean;
-  ranged: boolean;
-  defence: boolean;
-  magic: boolean;
-  overhead: boolean;
-  tier: number;
-}
-
 export interface ILevels {
   strength: number;
   attack: number;
@@ -77,5 +67,5 @@ export interface ILevels {
 
 export enum ActiveTab {
   Setup,
-  Results
+  Results,
 }

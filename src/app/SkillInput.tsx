@@ -1,7 +1,7 @@
 import style from "./StatInput.module.css";
 import { ILevels } from "./types";
 
-export default function StatInput({
+export default function SkillInput({
   skillName: name,
   skillLevel: lvlNumber,
   changeLevel: changeLevel,
