@@ -1,0 +1,46 @@
+.statInput {
+  width: 100px;
+  height: 40px;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  background-repeat: no-repeat;
+  background-color: #494949;
+  border:none;
+  background-position:left 50%;
+  border-radius: 5px;
+  margin: 5px;
+  border-left: 5px solid #494949;
+  color: white;
+  padding-left: 30px;
+}
+.statInput::-webkit-inner-spin-button, .statInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0
+}
+
+/*
+ i couldn't figure out how to do this in tsx without adding a library, so this is my solution.
+ it works, but it's not pretty. just like css.
+*/
+
+.strength {
+  background-image: url("/skills/strength.png");
+}
+.attack {
+  background-image: url("/skills/attack.png");
+}
+.defence {
+  background-image: url("/skills/defence.png");
+}
+.prayer {
+  background-image: url("/skills/prayer.png");
+}
+.ranged {
+  background-image: url("/skills/ranged.png");
+}
+.hitpoints {
+  background-image: url("/skills/hitpoints.png");
+}
+.magic {
+  background-image: url("/skills/magic.png");
+}
