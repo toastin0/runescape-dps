@@ -1,4 +1,4 @@
-import style from "./StatOverview.module.css";
+import style from './PlayerLookup.module.css'
 
 export default function PlayerLookup({
   onSubmit: submitFn,
@@ -18,9 +18,8 @@ export default function PlayerLookup({
         }}
       >
         <label className={style.statLabel}>
-          RSN
-          <input name="rsn-input" className={style.nameLookup}></input>
-          <button type="submit">Lookup</button>
+          <input name="rsn-input" className={style.inputBox}></input>
+          <button type="submit" className={style.submitButton}>Lookup</button>
         </label>
       </form>
     </>
