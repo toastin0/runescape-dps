@@ -1,0 +1,26 @@
+.inputBox {
+  width: 100px;
+  height: 40px;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  background-repeat: no-repeat;
+  background-color: #494949;
+  border: none;
+  background-position: left 50%;
+  border-radius: 5px;
+  margin: 5px;
+  border-left: 5px solid #494949;
+  color: white;
+  padding-left: 30px;
+  background-image: url("/account_man.png");
+}
+
+.submitButton {
+  background: #8c5dd9;
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
