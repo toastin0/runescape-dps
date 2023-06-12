@@ -16,9 +16,7 @@ export default function SkillInput({
         className={`${style.statInput} ${style[name]}`}
         type="number"
         value={lvlNumber}
-        onChange={(e) =>
-          changeLevel(name, parseInt(e.target.value, 10))
-        }
+        onChange={(e) => changeLevel(name, parseInt(e.target.value, 10))}
       ></input>
     </label>
   );
