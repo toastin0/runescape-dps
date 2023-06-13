@@ -4,26 +4,19 @@ import json
 import collections
 
 
-def remove_single_entry_lists(input: dict):
-    for (key, value) in dict.items(input):
+def format_api_response(dict_input: dict):
+    for (key, value) in dict.items(dict_input):
         if isinstance(value, dict):
-            remove_single_entry_lists(value)
-        elif type(value) is list and len(value) == 1:
-            input.update({key: value[0]})
+            format_api_response(value)
+        if type(value) is list and len(value) == 1:
+            # the api likes to wrap single values in a list, so this unpacks it.
+            dict_input.update({key: value[0]})
+        elif value == []:
+            # it also likes to use an empty list instead of a null value, so this converts it.
+            dict_input.update({key: None})
+    
 
-def replace_empty_arr_with_null(input: dict):
-     for (key, value) in dict.items(input):
-        if isinstance(value, dict):
-            replace_empty_arr_with_null(value)
-        elif type(value) is list and len(value) == 0:
-            input.update({key: None})
-
-def format_api_response(input: dict):
-    remove_single_entry_lists(input)
-    replace_empty_arr_with_null(input)
-
-# MAX_OFFSET = 3520
-MAX_OFFSET = 100
+MAX_OFFSET = 3520
 API_URL = "https://oldschool.runescape.wiki/api.php"
 header = {"User-Agent": "runescape-equipment-data-puller/0.0.1"}
 offset = 0
@@ -35,7 +28,7 @@ with open("./helper/runescape-data/item_list.json", "w") as file:
         parameters = {
             "action": "askargs",
             "conditions": "Category:Equipable items",
-            "printouts": "All Combat style |All Crush attack bonus |All Crush defence bonus |All Equipment slot |All Magic Damage bonus |All Magic attack bonus |All Magic defence bonus |All Prayer bonus |All Range attack bonus |All Range defence bonus |All Slash attack bonus |All Slash defence bonus |All Stab attack bonus |All Stab defence bonus |All Strength bonus |All Weapon attack range |All Weapon attack speed |All Item ID |Image",
+            "printouts": "All Combat style|All Crush attack bonus|All Crush defence bonus|All Equipment slot|All Magic Damage bonus|All Magic attack bonus|All Magic defence bonus|All Prayer bonus|All Range attack bonus|All Range defence bonus|All Slash attack bonus|All Slash defence bonus|All Stab attack bonus|All Stab defence bonus|All Strength bonus|All Weapon attack range|All Weapon attack speed|All Item ID|Image",
             "parameters": f"offset={offset}",
             "format": "json",
             "api_version": 3
@@ -50,5 +43,5 @@ with open("./helper/runescape-data/item_list.json", "w") as file:
                 offset = json_response["query-continue-offset"]
             else: 
                 break
-    remove_single_entry_lists(main_dict)
+    format_api_response(main_dict)
     file.write(json.dumps(main_dict))
