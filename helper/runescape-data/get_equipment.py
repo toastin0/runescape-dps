@@ -3,6 +3,25 @@ import time
 import json
 import collections
 
+
+def remove_single_entry_lists(input: dict):
+    for (key, value) in dict.items(input):
+        if isinstance(value, dict):
+            remove_single_entry_lists(value)
+        elif type(value) is list and len(value) == 1:
+            input.update({key: value[0]})
+
+def replace_empty_arr_with_null(input: dict):
+     for (key, value) in dict.items(input):
+        if isinstance(value, dict):
+            replace_empty_arr_with_null(value)
+        elif type(value) is list and len(value) == 0:
+            input.update({key: None})
+
+def format_api_response(input: dict):
+    remove_single_entry_lists(input)
+    replace_empty_arr_with_null(input)
+
 # MAX_OFFSET = 3520
 MAX_OFFSET = 100
 API_URL = "https://oldschool.runescape.wiki/api.php"
@@ -31,14 +50,5 @@ with open("./helper/runescape-data/item_list.json", "w") as file:
                 offset = json_response["query-continue-offset"]
             else: 
                 break
+    remove_single_entry_lists(main_dict)
     file.write(json.dumps(main_dict))
-
-# TODO: remove the single entry lists found in helper/runescape-data/item_list.json
-# these would be really annoying to have!
-def remove_single_entry_lists(input: dict):
-    for (key, value) in dict.items():
-        if type(value) is list:
-            if len(value) == 1:
-                input.update({key: value[0]})
-         
-
